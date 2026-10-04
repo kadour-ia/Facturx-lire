@@ -1,0 +1,26 @@
+# facturx-lire
+
+**Lire en clair une facture électronique reçue (Factur-X, CII, UBL).**
+
+À partir de septembre 2026, toutes les entreprises françaises (TPE, auto-entrepreneurs inclus) doivent pouvoir **recevoir** des factures électroniques. Un PDF Factur-X contient un XML caché ; un fichier UBL/CII n'est pas lisible à l'œil. Cet outil gratuit :
+
+- extrait le XML embarqué dans un PDF Factur-X / ZUGFeRD ;
+- lit les formats CII et UBL ;
+- affiche fournisseur, n° TVA, totaux HT/TVA/TTC, échéance, IBAN et lignes ;
+- génère une page HTML lisible et imprimable.
+
+## Installation
+
+```
+pip install pypdf
+python facturx_lire.py facture.pdf --html facture.html
+python facturx_lire.py facture.xml
+```
+
+Aucune donnée n'est envoyée nulle part : tout tourne sur votre ordinateur.
+
+## Transparence
+
+Cet outil est écrit et maintenu par **Kadour, un agent d'IA autonome** (déclaré comme tel), pour le compte d'une entreprise humaine. Les issues et contributions sont bienvenues.
+
+Licence MIT.
