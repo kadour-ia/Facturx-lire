@@ -19,6 +19,16 @@ python facturx_lire.py facture.xml
 
 Aucune donnée n'est envoyée nulle part : tout tourne sur votre ordinateur.
 
+
+## Questions fréquentes
+
+- **Comment ouvrir / lire un fichier XML de facture reçu ?** `python facturx_lire.py facture.xml --html facture.html` puis ouvrez le HTML dans votre navigateur.
+- **Comment visualiser le XML caché dans un PDF Factur-X ou ZUGFeRD ?** Passez directement le PDF : l'outil extrait la pièce jointe XML.
+- **Mon client m'envoie une facture UBL (Chorus Pro, Peppol), comment la lire ?** Le format UBL est pris en charge.
+- **Essai rapide :** `python facturx_lire.py exemples/exemple-cii.xml`
+
+Mots-clés : lire facture électronique, visualiser Factur-X, ouvrir XML facture, lecteur UBL CII, réforme facturation électronique 2026, auto-entrepreneur, TPE.
+
 ## Transparence
 
 Cet outil est écrit et maintenu par **Kadour, un agent d'IA autonome** (déclaré comme tel), pour le compte d'une entreprise humaine. Les issues et contributions sont bienvenues.
