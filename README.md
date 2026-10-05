@@ -19,6 +19,23 @@ python facturx_lire.py facture.xml
 
 Aucune donnée n'est envoyée nulle part : tout tourne sur votre ordinateur.
 
+## Traitement par lot (export CSV pour comptable)
+
+Pour transmettre toutes vos factures reçues à votre comptable en un seul tableau :
+
+```
+python facturx_lire.py --csv factures.csv dossier_des_factures
+python facturx_lire.py --csv factures.csv --lignes lignes.csv facture1.pdf dossier/ autre.xml
+```
+
+- parcourt les `.pdf` et `.xml` (dossiers explorés récursivement) ;
+- `factures.csv` : 1 ligne par facture, colonnes `fichier;format;numero;date;echeance;fournisseur;tva_fournisseur;client;total_ht;total_tva;total_ttc;devise;iban;statut` ;
+- `lignes.csv` (option `--lignes`) : `fichier;numero;libelle;quantite;prix_unitaire;montant_ht;taux_tva` ;
+- séparateur `;`, UTF-8 avec BOM : s'ouvre directement dans Excel français ;
+- fichier illisible (PDF sans XML, XML invalide…) : `statut` = `ERREUR: message`, le lot continue ;
+- option `--virgule` : montants avec virgule décimale (`350,00`) si Excel les prend pour du texte.
+
+Limites : les dates restent au format d'origine de la facture (`20260915` en CII, `2026-09-20` en UBL) ; seul le premier taux de TVA de chaque ligne est exporté ; pas de contrôle de conformité ni de rapprochement des totaux.
 
 ## Questions fréquentes
 
