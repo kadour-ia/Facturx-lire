@@ -9,6 +9,10 @@
 - affiche fournisseur, n° TVA, totaux HT/TVA/TTC, échéance, IBAN et lignes ;
 - génère une page HTML lisible et imprimable.
 
+## Version en ligne (sans installation)
+
+Traitement par lot dans le navigateur : **https://factures.kadour-ia.com** (10 factures gratuites par lot, fichiers supprimés après traitement).
+
 ## Installation
 
 ```
